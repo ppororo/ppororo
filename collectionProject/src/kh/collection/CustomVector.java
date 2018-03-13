@@ -9,6 +9,7 @@ public class CustomVector {
 	}
 	public CustomVector(int capacity) {
 		objArr = new Object[capacity];
+		System.out.println();
 	}
 	
 	public int capacity() {
