@@ -32,8 +32,26 @@ public class HashSetTest {
 		System.out.println("비어있음 여부 확인: "+set.isEmpty());
 		System.out.println("해당 객체 존재 여부 확인: "+set.contains(15));
 		System.out.println(set.toArray());
-		System.out.println("값 삭제1: "+set.remove(2.55));
-		System.out.println("값 삭제2: "+set.remove(2.55));
+//		System.out.println("값 삭제1: "+set.remove(2.55));
+//		System.out.println("값 삭제2: "+set.remove(2.55));
+		System.out.println("==========================");
+		
+		//이터레이터를 통하여 set값을 출려
+		Iterator iter=set.iterator();
+		int index = 1;
+		while(iter.hasNext()) {
+			System.out.println(iter.next());
+			index++;
+		}
+		//개선된 for문을 이용하여 출력
+		System.out.println("=====개선된 for문=====");
+		for(Object obj:set) {
+			System.out.println(obj.toString());
+		}
+		//set값을 삭제
+		set.clear();
+		System.out.println(set.isEmpty());
+		
 	}
 
 }
